@@ -19,4 +19,38 @@ namespace Ejercicio2GIT
             Cantidad = cantidad;
         }
     }
+
+    internal class Programa
+    {
+        static void Main()
+        {
+            while (true)
+            {
+                Console.WriteLine("Seleccione una opción: ");
+                Console.WriteLine("1. Agregar producto");
+                Console.WriteLine("2. Actualizar el stock");
+                Console.WriteLine("3. Calcular valor de inventario");
+                Console.WriteLine("4. Salir");
+                int opcion = Convert.ToInt32(Console.ReadLine());
+
+                switch (opcion)
+                {
+                    case 1:
+                        AgregarProducto(ref inventario);
+                        break;
+                    case 2:
+                        ActualizarStock(ref inventario);
+                        break;
+                    case 3:
+                        double valorTotal = CalcularValorTotal(ref inventario);
+                        Console.WriteLine("El valor total del inventario es: " + valorTotal);
+                        break;
+                    case 4: return;
+                    default:
+                        Console.WriteLine("Opción no válida");
+                        break;
+                }
+            }
+        }
+    }
 }
