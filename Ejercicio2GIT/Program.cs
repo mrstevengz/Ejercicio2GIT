@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace Ejercicio2GIT
 {
-    internal class Program
+    public class Producto
     {
-        static void Main(string[] args)
+        public string Nombre; //Definicion de variables
+        public double Precio;
+        public int Cantidad;
+
+        public Producto(string nombre, double precio, int cantidad)
         {
-            Console.WriteLine("Hola Mundo");
+            Nombre = nombre;
+            Precio = precio;
+            Cantidad = cantidad;
         }
     }
 }
