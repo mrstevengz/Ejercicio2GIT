@@ -24,6 +24,7 @@ namespace Ejercicio2GIT
     {
         static void Main() //Creacion del menu
         {
+            List<Producto> inventario = new List<Producto>();
             while (true)
             {
                 Console.WriteLine("Seleccione una opción: ");
@@ -62,5 +63,36 @@ namespace Ejercicio2GIT
 
             Console.WriteLine("Ingrese la cantidad del producto: ");
             int cantidad = Convert.ToInt32(Console.ReadLine());
+
+            inventario.Add(new Producto(nombre, precio, cantidad));
+            Console.WriteLine($"Producto {nombre} agregado al inventario");
         }
+        public static void ActualizarStock(ref List<Producto> inventario)
+        {
+            Console.WriteLine("Ingrese el nombre del producto para actualizar el stock: ");
+            string nombre = Console.ReadLine();
+            foreach (var producto in inventario)
+            {
+                if (producto.Nombre == nombre)
+                {
+                    Console.WriteLine("Ingrese la cantidad a agregar: ");
+                    int cantidad = Convert.ToInt32(Console.ReadLine());
+                    producto.Cantidad += cantidad;
+                    Console.WriteLine($"Stock actualizado para {nombre}");
+                    return;
+                }
+            }
+            Console.WriteLine($"Producto {nombre} no encontrado en el inventario");
+        }
+
+        public static double CalcularValorTotal(ref List<Producto> inventario)
+        {
+            double valorTotal = 0;
+            foreach (var producto in inventario)
+            {
+                valorTotal += producto.Precio * producto.Cantidad;
+            }
+            return valorTotal;
+        }
+    }
 }
