@@ -22,7 +22,7 @@ namespace Ejercicio2GIT
 
     internal class Programa
     {
-        static void Main() //Creacion del menu
+        static void Main() //Creacion del menu principal
         {
             List<Producto> inventario = new List<Producto>();
             while (true)
