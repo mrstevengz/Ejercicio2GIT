@@ -52,5 +52,15 @@ namespace Ejercicio2GIT
                 }
             }
         }
-    }
+        public static void AgregarProducto(ref List<Producto> inventario)
+        {
+            Console.WriteLine("Ingrese el nombre del producto: ");
+            string nombre = Console.ReadLine();
+
+            Console.WriteLine("Ingrese el precio del producto: ");
+            double precio = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Ingrese la cantidad del producto: ");
+            int cantidad = Convert.ToInt32(Console.ReadLine());
+        }
 }
