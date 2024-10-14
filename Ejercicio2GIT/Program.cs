@@ -10,6 +10,7 @@ namespace Ejercicio2GIT
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hola Mundo");
         }
     }
 }
