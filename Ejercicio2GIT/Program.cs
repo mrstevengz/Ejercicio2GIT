@@ -22,7 +22,7 @@ namespace Ejercicio2GIT
 
     internal class Programa
     {
-        static void Main()
+        static void Main() //Creacion del menu
         {
             while (true)
             {
