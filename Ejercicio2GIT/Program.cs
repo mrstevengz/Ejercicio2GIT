@@ -53,7 +53,7 @@ namespace Ejercicio2GIT
                 }
             }
         }
-        public static void AgregarProducto(ref List<Producto> inventario)
+        public static void AgregarProducto(ref List<Producto> inventario) //Agregar productos 
         {
             Console.WriteLine("Ingrese el nombre del producto: ");
             string nombre = Console.ReadLine();
@@ -85,7 +85,7 @@ namespace Ejercicio2GIT
             Console.WriteLine($"Producto {nombre} no encontrado en el inventario");
         }
 
-        public static double CalcularValorTotal(ref List<Producto> inventario)
+        public static double CalcularValorTotal(ref List<Producto> inventario) // asignacion de valores calcular valor total
         {
             double valorTotal = 0;
             foreach (var producto in inventario)
